@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" type="text/css" href="../static/styles/css/ui.css" />
+		<link rel="icon" type="image/png" href="../static/images/Chat_Bot_logo.jpg" />
+		<title>A Bot for train ticket booking</title>
+	</head>
+	<body>
+		<header>
+			<img id="logo" alt="Chat_bot logo" src="../static/images/Chat_Bot_logo.jpg"/>
+		</header>
+		<main>
+			<div class="chat-container">
+				<div id="chat"></div>
+			</div>
+			<div class="side-bar">
+				<div class="container" id="booking">
+					<h1 class="heading">
+						<img src="../static/images/Chat_Bot_logo.jpg" alt="Booking Icon"/>booking
+					</h1>
+					<span class="content active">
+						<br/>
+						<div class="ticket">
+							<div class="ticket-header">******</div>
+							<div class="ticket-container">
+								<div class="info from">******</div>
+								<div class="info out">** *** ** @ **:**</div>
+								<div class="info to">******</div>
+								<div class="info in">** *** ** @ **:**</div>
+								<div class="info adults">***</div>
+								<div class="info child">***</div>
+							</div>
+							<div class="ticket-icon"></div>
+							<div class="ticket-footer">Updated <span id="search-time">**:**</span></div>
+						</div>
+					</span>
+					<span class="content inactive">
+						<p>Ask me to book a ticket and take a good stretch !</p>
+					</span>
+				</div>
+			<!--	<div class="container" id="predict">
+					<h1 class="heading">
+						<img src="../static/images/prediction.jpg" alt="Predict Icon"/>Prediction
+					</h1>
+					<span class="content active">
+						<p>Chat_Bot can currently only predict train delays from Norwich to
+						   London Liverpool Street on the Great Eastern Mainline.</p>
+					</span>
+					<span class="content inactive">
+						<p> Ask me &lsquo;How long will I be delayed?&rsquo;. Ask Chat_Bot to predict
+							your delay based on National Rail data. (For trains from Norwich to London Liverpool
+							Street)</p>
+					</span>
+				</div>-->
+				<!-- <div class="container" id="support">
+				#	<h1 class="heading">
+					#	<img src="../static/images/Home_page.jpg" alt="Support Icon"/>using Chat_Bot
+					</h1>
+					<span class="content inactive">
+						<p>AKO is here to help you. Just say 'Book a ticket' or 'Delay prediction' to get started</p>
+					</span>
+				</div>-->
+			</div>
+		</main>
+		<footer>
+			<form method="POST" id="message_form">
+				<div class="form-group">
+					<input type="text" class="left-box" id="user_input" name="user_input" placeholder="Type your text here"/>
+					<button type="button" class="right-box record-speech" onclick="fromMic()"></button>
+					<button type="submit" class="right-box send-message"></button>
+				</div>
+			</form>
+		</footer>
+	</body>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/microsoft-cognitiveservices-speech-sdk@latest/distrib/browser/microsoft.cognitiveservices.speech.sdk.bundle-min.js"></script>
+	<script src="../static/styles/javascript/scripts.js"></script>
+</html>
